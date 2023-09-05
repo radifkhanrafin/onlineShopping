@@ -4,13 +4,10 @@ import Layout from './Component/Layout/Layout'
 import Shop from './Component/Shop/Shop'
 
 function App() {
-  
 
   return (
     <div className="App">
-      {/* <Header></Header>
-      <Shop></Shop> */}
-      <Layout></Layout>
+      {/* <Layout></Layout> */}
     </div>
   )
 }

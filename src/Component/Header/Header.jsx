@@ -1,30 +1,16 @@
 import React, { useContext } from 'react';
-import './Header.css'
-import logo from '../../images/Logo.svg';
+import logo from '../images/Logo.svg';
 import { Link } from 'react-router-dom';
-import { AuthProvaider } from '../../Provaider/Provaider';
 
 
 const Header = () => {
-    const { user , logOut } = useContext(AuthProvaider);
-    // console.log(user)
-    const handleLogOut=()=>{
-        // console.log('out')
-        logOut()
-    }
     return (
-        <nav className='header'>
+        <nav className='bg-slate-800 flex justify-between items-center py-3 px-14'>
             <img className='logo' src={logo} alt="" />
-            <div className='nav'>
+            <div className='flex gap-7  text-white text-lg'>
                 <Link to="/">Shop</Link>
-                <Link to="/order">Order Review</Link>
-                <Link to="/inventory">Manage Inventory</Link>
-                <Link to="/login">Login</Link>
-                <Link to="/signup">Sign Up</Link>
-                {
-                    user && 
-                    <span className='text-gray-200'> welcome {user.email}  <button onClick={handleLogOut}>Sign Out </button></span>
-                }
+                <Link to="/cart">Cart Product's</Link>
+                
             </div>
         </nav>
     );

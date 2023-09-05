@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Cart from '../Cart/Cart';
 import Products from '../Products/Products';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
@@ -17,7 +16,7 @@ const Shop = () => {
                 setProduct(res.data)
             })
     }, []);
-    console.log(products)
+    // console.log(products)
     return (
         <div className=''>
             <div
@@ -32,17 +31,6 @@ const Shop = () => {
                     ></Products>)
                 }
             </div>
-
-            {/* <div className="cart-container">
-                <Cart
-                    clearCart={clearCart}
-                    cart={cart}>
-                    <Link to='/order' className='review-btn'>
-                        Review Order <FontAwesomeIcon icon={faArrowCircleRight} />
-                    </Link>
-                </Cart>
-
-            </div> */}
 
         </div>
     );
